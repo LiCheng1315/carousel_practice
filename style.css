@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: MicrosoftJhengHeiRegular;
+}
+
+body {
+  background-color: beige;
+}
+
+
+html, body, h1, h2, h3, h4, h5, p, ul, li {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.debug, .debug * {
+	outline: solid 1px gold;
+}
+
+
+
+
+
+.container {
+  position: relative;
+  top: 100px;
+  max-width: 51%;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  list-style-type: none;
+  position: relative;
+  height: 100%;
+  /*transition: 0.5s;*/
+}
+
+
+img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+
+.slide-left, .slide-right {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 90px;
+  text-align: center;
+  padding: 25% 0;
+  top: 0px;
+}
+
+.slide-left:hover, .slide-right:hover {
+  background-color: rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+.slide-left:hover .arrow, .slide-right:hover .arrow {
+  border: solid rgba(255,255,255,0.9);
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 8px;
+}
+
+
+
+.slide-left {
+  left: 0px;
+}
+
+.slide-right {
+  right: 0px;
+}
+
+
+.arrow {
+  border: solid rgba(255,255,255,0.5);
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 8px;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+}
+
+
+.carousel__nav {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.carousel__indicator {
+  border-radius: 15%;
+  background-color: rgba(255,255,255,0.3);
+  height: 5px;
+  width: 40px;
+  margin: 10px;
+}
+
+
+
+
+.current-dot {
+  background-color: rgb(255,255,255);
+}
