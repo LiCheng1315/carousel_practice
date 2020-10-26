@@ -82,3 +82,16 @@ track.addEventListener('transitionend', () => {
     moveToSlide(track, index);
   }
 })
+
+
+dotNav.addEventListener('click', (e) => {
+  if ((!(e.target.classList.contains('.current-dot'))) && (!(e.target.classList.contains("carousel__nav")))) {
+    track.style.transition = "0.5s";
+    let p = e.target.parentElement;
+    index = Array.prototype.indexOf.call(p.children, e.target) + 1;
+    changeIndicator(document.querySelector('.current-dot'), e.target);
+    moveToSlide(track, index);
+    console.log(e.target);
+    console.log(index);
+  }
+})
